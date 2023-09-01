@@ -22,11 +22,11 @@ onResize arguments: ![ResizeObserverEntry](https://developer.mozilla.org/en-US/d
 
 特点：
 
-使用方法非常简单
-元素不改变尺寸的时候，也能得到宽高尺寸的回调数据
-resize改变尺寸的时候，可获取到dom节点的宽高等信息
-基于 ResizeObserver 实现的dom尺寸变更检测，兼容性：chrome >= v64
-不仅仅获取元素宽高，还有详细信息
+使用方法非常简单  
+元素不改变尺寸的时候，也能得到宽高尺寸的回调数据  
+resize改变尺寸的时候，可获取到dom节点的宽高等信息  
+基于 ResizeObserver 实现的dom尺寸变更检测，兼容性：chrome >= v64  
+不仅仅获取元素宽高，还有详细信息  
 ```
 contentRect:
   bottom: 250
