@@ -20,6 +20,31 @@ onResize arguments: ![ResizeObserverEntry](https://developer.mozilla.org/en-US/d
 
 当一个 fixed 定位的元素A在页面中，如果你希望A不要超过页面中某个容器的宽度、高度，那么这个组件就能解决你的问题。
 
+特点：
+
+使用方法非常简单
+元素不改变尺寸的时候，也能得到宽高尺寸的回调数据
+resize改变尺寸的时候，可获取到dom节点的宽高等信息
+基于 ResizeObserver 实现的dom尺寸变更检测，兼容性：chrome >= v64
+不仅仅获取元素宽高，还有详细信息
+```
+contentRect:
+  bottom: 250
+  height: 250
+  left: 0
+  right: 878
+  top: 0
+  width: 878
+  x: 0
+  y: 0
+
+ResizeObserverEntry
+  borderBoxSize: [ResizeObserverSize]
+  contentBoxSize: [ResizeObserverSize]
+  contentRect: {x: 0, y: 0, width: 0, height: 0, top: 0, …}
+  devicePixelContentBoxSize: [ResizeObserverSize]
+  target: element
+```
 
 ![npm](https://img.shields.io/npm/v/vue-element-size)
 [![gzip size](http://img.badgesize.io/https://unpkg.com/vue-element-size/vvue-element-size.js?compression=gzip&label=gzip%20size&style=flat-square)](https://unpkg.com/vue-element-size/vvue-element-size.js)
