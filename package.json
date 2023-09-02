@@ -1,7 +1,7 @@
 {
   "name": "vue-element-size",
-  "version": "0.0.2",
-  "description": "",
+  "version": "0.0.3",
+  "description": "get element size for vue.js",
   "main": "vue-element-size.js",
   "scripts": {
   },
@@ -13,6 +13,7 @@
   },
   "keywords": [
     "element-size",
+    "vue-resize",
     "element-width",
     "element-height",
     "ResizeObserver",

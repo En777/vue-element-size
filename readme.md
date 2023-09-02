@@ -1,8 +1,12 @@
 # vue-element-size
 
 v-size="onResize" get element size/width/height for Vue.js development.
+
+[Demo & Usage](https://en777.github.io/vue-element-size/example/)
+
 ```
-// usage for vue.js
+// usage
+// npm install vue-element-size
 directives: {
   size: require('vue-element-size')
 }
@@ -14,7 +18,7 @@ directives: {
 <div v-size="onResize">
   // ...
 </div>
-onResize arguments: ![ResizeObserverEntry](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserverEntry)
+onResize arguments: ResizeObserverEntry https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserverEntry
 
 ```
 
@@ -51,3 +55,13 @@ ResizeObserverEntry
 [![downloads](https://img.shields.io/npm/dm/vue-element-size.svg?style=flat-square)](https://www.npmtrends.com/vue-element-size)
 [![MIT License](https://img.shields.io/npm/l/vue-element-size.svg?style=flat-square)](https://github.com/fisker/vue-element-size/blob/master/license)
 [![jsdelivr](https://data.jsdelivr.com/v1/package/npm/vue-element-size/badge)](https://www.jsdelivr.com/package/npm/vue-element-size)
+
+```
+vue-element-size.js
+  NPM install:
+    npm install vue-element-size
+    var VueElementSize = require('vue-element-size');
+
+  CDN:
+    https://cdn.jsdelivr.net/npm/vue-element-size@0.0.2/vue-element-size.js
+```
