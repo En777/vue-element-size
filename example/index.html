@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vue-element-size.js Demo/Example</title>
+</head>
+
+<body>
+  <h1>vue-element-size.js Demo</h1>
+  <a href="#usageBox">Usage 使用方法</a>
+
+  <div>fixed元素的宽度，跟随 Center 容器的宽度。</div>
+  <div>切换左侧栏、右侧栏的时候，fixed布局的元素，会主动跟随容器宽度的变化。</div>
+
+  <br>
+  <div id="app">
+    <div style="display: flex;">
+      <div class="left" style="width: 100px;" v-show="enableLeft">
+        Left
+        <br>
+        <button @click="enableLeft = !enableLeft">toggle Left</button>
+      </div>
+
+      <div class="center" style="flex: 1; outline: 1px solid pink; min-height: 100vh;" v-size:width="setFixedBar">
+        Center<br>
+
+        <div>
+          <button @click="enableLeft = !enableLeft">toggle Left</button>
+          <br>
+          <button @click="enableRight = !enableRight">toggle Right</button>
+        </div>
+
+        <div class="fixedBar" ref="fixedBar"
+          style="position: fixed; width: 98%; bottom: 40px; border: 1px solid #ccc; border-radius: 5px;">
+          <div>fixedBar</div>
+          <div>{{ fixedBarWidth }}</div>
+        </div>
+      </div>
+
+      <div class="right" style="width: 150px;" v-if="enableRight">
+        Right
+        <br>
+        <button @click="enableRight = !enableRight">toggle Right</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+  <!-- <script src="./vue-prevent-multiple-click.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue-element-size@0.0.2/vue-element-size.js"></script>
+  <h2 id="usageBox">Usage</h2>
+  <pre>
+  <script style="display: block;">
+    // Vue.directive('size', window.VueElementSize) // global directive
+
+    new Vue({
+      el: '#app',
+      directives: {
+        size: window.VueElementSize
+      },
+      data: {
+        enableLeft: true,
+        enableRight: true,
+        fixedBarWidth: '98%'
+      },
+      methods: {
+        setFixedBar(size) {
+          console.log(size);
+          var fixedBarWidth = size.width + 'px'
+          this.fixedBarWidth = fixedBarWidth;
+          this.$refs.fixedBar.style.width = fixedBarWidth;
+        }
+      }
+    })
+  </script>
+  </pre>
+  <pre>
+    vue-element-size.js
+    NPM install:
+      npm install vue-element-size
+      var VueElementSize = require('vue-element-size');
+
+    CDN:
+      https://cdn.jsdelivr.net/npm/vue-element-size@0.0.2/vue-element-size.js
+  </pre>
+  <br>
+  <br>
+  <br>
+  <br>
+
+</body>
+
+</html>
